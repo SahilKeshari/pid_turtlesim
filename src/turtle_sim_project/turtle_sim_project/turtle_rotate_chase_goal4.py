@@ -29,7 +29,7 @@ class TurtleRotate(Node):
 
         self.pt_timer = self.create_timer(10.0, self.pt_start_callback)
 
-        self.speed = 1.0
+        self.speed = 3.0
         self.radius = 5.0
 
         self.prev_linear_velocity = 0.0
