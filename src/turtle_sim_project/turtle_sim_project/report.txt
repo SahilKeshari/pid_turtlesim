@@ -1,0 +1,16 @@
+Goal 1:
+    For reaching goal1 there are two files:
+    1 - turtle_controller_pid.py ( which controls the pid and helps to reach the goal)
+    2 - turtle_spawner.py ( which makes the turtle spawn at random locations from where it should reach the goal)
+
+Goal 2: turtle_grid_goal2.py
+    Used the pid gains from the goal 1 and define the grid points to the robot.
+    Yes it is required to change the gains every time, but with further hit and trial I came up to some
+    value which works everywhere.
+
+Goal 3: turtle_rotate_goal3.py
+    Passed the linear.x and angular.z with little bit mathematics for converting the speed and radius,
+    in terms of linear and angular values.
+
+
+Goal 4: turtle_rotate_chase_goal4.py

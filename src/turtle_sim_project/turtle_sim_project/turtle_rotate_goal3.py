@@ -68,7 +68,7 @@ class TurtleRotate(Node):
     def add_gaussian_noise(self):
         self.noise_pos_x = random.gauss(0, 1.0)
         self.noise_pos_y = random.gauss(0, 1.0)
-        self.noise_orie = random.gauss(0,0.3)
+        self.noise_orie = random.gauss(0, 0.3)
 
     def publish_topics(self):
         if self.pose_ == None:
