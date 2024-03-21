@@ -1,0 +1,3 @@
+
+install/turtle_sim_project/lib/turtle_sim_project/turtlesim_rotate_chase_goal5 = turtle_sim_project.turtle_rotate_chase_goal5:mainturtlesim_rotate_chase_goal6
+install/turtle_sim_project/lib/turtle_sim_project/turtlesim_controller = turtle_sim_project.turtle_controller:mainturtle_spawner
