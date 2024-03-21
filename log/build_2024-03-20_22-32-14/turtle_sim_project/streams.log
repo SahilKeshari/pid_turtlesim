@@ -1,0 +1,40 @@
+[0.409s] Invoking command in '/home/sahil-22/ros2_ws/src/turtle_sim_project': PYTHONPATH=/home/sahil-22/ros2_ws/build/turtle_sim_project/prefix_override:/home/sahil-22/ros2_ws/install/turtle_sim_project/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtle_sim_project build --build-base /home/sahil-22/ros2_ws/build/turtle_sim_project/build install --record /home/sahil-22/ros2_ws/build/turtle_sim_project/install.log --single-version-externally-managed install_data
+[0.569s] running egg_info
+[0.569s] creating ../../build/turtle_sim_project/turtle_sim_project.egg-info
+[0.569s] writing ../../build/turtle_sim_project/turtle_sim_project.egg-info/PKG-INFO
+[0.569s] writing dependency_links to ../../build/turtle_sim_project/turtle_sim_project.egg-info/dependency_links.txt
+[0.569s] writing entry points to ../../build/turtle_sim_project/turtle_sim_project.egg-info/entry_points.txt
+[0.570s] writing requirements to ../../build/turtle_sim_project/turtle_sim_project.egg-info/requires.txt
+[0.570s] writing top-level names to ../../build/turtle_sim_project/turtle_sim_project.egg-info/top_level.txt
+[0.570s] writing manifest file '../../build/turtle_sim_project/turtle_sim_project.egg-info/SOURCES.txt'
+[0.571s] reading manifest file '../../build/turtle_sim_project/turtle_sim_project.egg-info/SOURCES.txt'
+[0.572s] writing manifest file '../../build/turtle_sim_project/turtle_sim_project.egg-info/SOURCES.txt'
+[0.572s] running build
+[0.572s] running build_py
+[0.572s] creating /home/sahil-22/ros2_ws/build/turtle_sim_project/build
+[0.572s] creating /home/sahil-22/ros2_ws/build/turtle_sim_project/build/lib
+[0.572s] creating /home/sahil-22/ros2_ws/build/turtle_sim_project/build/lib/turtle_sim_project
+[0.572s] copying turtle_sim_project/__init__.py -> /home/sahil-22/ros2_ws/build/turtle_sim_project/build/lib/turtle_sim_project
+[0.573s] copying turtle_sim_project/turtle_spawner.py -> /home/sahil-22/ros2_ws/build/turtle_sim_project/build/lib/turtle_sim_project
+[0.573s] copying turtle_sim_project/turtle_controller.py -> /home/sahil-22/ros2_ws/build/turtle_sim_project/build/lib/turtle_sim_project
+[0.573s] running install
+[0.573s] running install_lib
+[0.573s] creating /home/sahil-22/ros2_ws/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project
+[0.574s] copying /home/sahil-22/ros2_ws/build/turtle_sim_project/build/lib/turtle_sim_project/__init__.py -> /home/sahil-22/ros2_ws/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project
+[0.574s] copying /home/sahil-22/ros2_ws/build/turtle_sim_project/build/lib/turtle_sim_project/turtle_spawner.py -> /home/sahil-22/ros2_ws/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project
+[0.574s] copying /home/sahil-22/ros2_ws/build/turtle_sim_project/build/lib/turtle_sim_project/turtle_controller.py -> /home/sahil-22/ros2_ws/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project
+[0.574s] byte-compiling /home/sahil-22/ros2_ws/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project/__init__.py to __init__.cpython-310.pyc
+[0.574s] byte-compiling /home/sahil-22/ros2_ws/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project/turtle_spawner.py to turtle_spawner.cpython-310.pyc
+[0.575s] byte-compiling /home/sahil-22/ros2_ws/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project/turtle_controller.py to turtle_controller.cpython-310.pyc
+[0.575s] running install_data
+[0.575s] creating /home/sahil-22/ros2_ws/install/turtle_sim_project/share/ament_index
+[0.575s] creating /home/sahil-22/ros2_ws/install/turtle_sim_project/share/ament_index/resource_index
+[0.575s] creating /home/sahil-22/ros2_ws/install/turtle_sim_project/share/ament_index/resource_index/packages
+[0.575s] copying resource/turtle_sim_project -> /home/sahil-22/ros2_ws/install/turtle_sim_project/share/ament_index/resource_index/packages
+[0.575s] copying package.xml -> /home/sahil-22/ros2_ws/install/turtle_sim_project/share/turtle_sim_project
+[0.576s] running install_egg_info
+[0.577s] Copying ../../build/turtle_sim_project/turtle_sim_project.egg-info to /home/sahil-22/ros2_ws/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project-0.0.0-py3.10.egg-info
+[0.577s] running install_scripts
+[0.592s] Installing turtlesim_controller = turtle_sim_project.turtle_controller:mainturtle_spawner script to /home/sahil-22/ros2_ws/install/turtle_sim_project/lib/turtle_sim_project
+[0.593s] writing list of installed files to '/home/sahil-22/ros2_ws/build/turtle_sim_project/install.log'
+[0.612s] Invoked command in '/home/sahil-22/ros2_ws/src/turtle_sim_project' returned '0': PYTHONPATH=/home/sahil-22/ros2_ws/build/turtle_sim_project/prefix_override:/home/sahil-22/ros2_ws/install/turtle_sim_project/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtle_sim_project build --build-base /home/sahil-22/ros2_ws/build/turtle_sim_project/build install --record /home/sahil-22/ros2_ws/build/turtle_sim_project/install.log --single-version-externally-managed install_data

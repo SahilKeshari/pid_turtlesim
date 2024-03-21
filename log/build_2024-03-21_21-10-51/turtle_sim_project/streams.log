@@ -1,0 +1,32 @@
+[0.729s] Invoking command in '/home/sahil-22/ros2_ws/src/turtle_sim_project': PYTHONPATH=/home/sahil-22/ros2_ws/build/turtle_sim_project/prefix_override:/home/sahil-22/ros2_ws/install/turtle_sim_project/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtle_sim_project build --build-base /home/sahil-22/ros2_ws/build/turtle_sim_project/build install --record /home/sahil-22/ros2_ws/build/turtle_sim_project/install.log --single-version-externally-managed install_data
+[0.991s] running egg_info
+[0.992s] writing ../../build/turtle_sim_project/turtle_sim_project.egg-info/PKG-INFO
+[0.992s] writing dependency_links to ../../build/turtle_sim_project/turtle_sim_project.egg-info/dependency_links.txt
+[0.992s] writing entry points to ../../build/turtle_sim_project/turtle_sim_project.egg-info/entry_points.txt
+[0.993s] writing requirements to ../../build/turtle_sim_project/turtle_sim_project.egg-info/requires.txt
+[0.993s] writing top-level names to ../../build/turtle_sim_project/turtle_sim_project.egg-info/top_level.txt
+[0.994s] reading manifest file '../../build/turtle_sim_project/turtle_sim_project.egg-info/SOURCES.txt'
+[0.996s] writing manifest file '../../build/turtle_sim_project/turtle_sim_project.egg-info/SOURCES.txt'
+[0.996s] running build
+[0.996s] running build_py
+[0.996s] copying turtle_sim_project/turtle_rotate_chase_goal5.py -> /home/sahil-22/ros2_ws/build/turtle_sim_project/build/lib/turtle_sim_project
+[0.997s] running install
+[0.997s] running install_lib
+[0.998s] copying /home/sahil-22/ros2_ws/build/turtle_sim_project/build/lib/turtle_sim_project/turtle_rotate_chase_goal5.py -> /home/sahil-22/ros2_ws/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project
+[0.999s] byte-compiling /home/sahil-22/ros2_ws/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project/turtle_rotate_chase_goal5.py to turtle_rotate_chase_goal5.cpython-310.pyc
+[1.000s] running install_data
+[1.000s] running install_egg_info
+[1.002s] removing '/home/sahil-22/ros2_ws/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project-0.0.0-py3.10.egg-info' (and everything under it)
+[1.002s] Copying ../../build/turtle_sim_project/turtle_sim_project.egg-info to /home/sahil-22/ros2_ws/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project-0.0.0-py3.10.egg-info
+[1.006s] running install_scripts
+[1.027s] Installing turtlesim_controller script to /home/sahil-22/ros2_ws/install/turtle_sim_project/lib/turtle_sim_project
+[1.027s] Installing turtlesim_controller_pid script to /home/sahil-22/ros2_ws/install/turtle_sim_project/lib/turtle_sim_project
+[1.027s] Installing turtlesim_grid_goal2 script to /home/sahil-22/ros2_ws/install/turtle_sim_project/lib/turtle_sim_project
+[1.027s] Installing turtlesim_relocate script to /home/sahil-22/ros2_ws/install/turtle_sim_project/lib/turtle_sim_project
+[1.028s] Installing turtlesim_rotate_chase_goal4 script to /home/sahil-22/ros2_ws/install/turtle_sim_project/lib/turtle_sim_project
+[1.028s] Installing turtlesim_rotate_chase_goal5 script to /home/sahil-22/ros2_ws/install/turtle_sim_project/lib/turtle_sim_project
+[1.028s] Installing turtlesim_rotate_chase_goal6 script to /home/sahil-22/ros2_ws/install/turtle_sim_project/lib/turtle_sim_project
+[1.028s] Installing turtlesim_rotate_goal3 script to /home/sahil-22/ros2_ws/install/turtle_sim_project/lib/turtle_sim_project
+[1.028s] Installing turtlesim_spawner script to /home/sahil-22/ros2_ws/install/turtle_sim_project/lib/turtle_sim_project
+[1.028s] writing list of installed files to '/home/sahil-22/ros2_ws/build/turtle_sim_project/install.log'
+[1.056s] Invoked command in '/home/sahil-22/ros2_ws/src/turtle_sim_project' returned '0': PYTHONPATH=/home/sahil-22/ros2_ws/build/turtle_sim_project/prefix_override:/home/sahil-22/ros2_ws/install/turtle_sim_project/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtle_sim_project build --build-base /home/sahil-22/ros2_ws/build/turtle_sim_project/build install --record /home/sahil-22/ros2_ws/build/turtle_sim_project/install.log --single-version-externally-managed install_data
