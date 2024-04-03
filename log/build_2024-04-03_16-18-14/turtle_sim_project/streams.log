@@ -1,0 +1,32 @@
+[0.613s] Invoking command in '/home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project': PYTHONPATH=/home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/prefix_override:/home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build --no-deps install_data
+[0.823s] running develop
+[0.967s] running egg_info
+[0.967s] creating turtle_sim_project.egg-info
+[0.967s] writing turtle_sim_project.egg-info/PKG-INFO
+[0.967s] writing dependency_links to turtle_sim_project.egg-info/dependency_links.txt
+[0.967s] writing entry points to turtle_sim_project.egg-info/entry_points.txt
+[0.968s] writing requirements to turtle_sim_project.egg-info/requires.txt
+[0.968s] writing top-level names to turtle_sim_project.egg-info/top_level.txt
+[0.968s] writing manifest file 'turtle_sim_project.egg-info/SOURCES.txt'
+[0.969s] reading manifest file 'turtle_sim_project.egg-info/SOURCES.txt'
+[0.969s] writing manifest file 'turtle_sim_project.egg-info/SOURCES.txt'
+[0.970s] running build_ext
+[0.970s] Creating /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle-sim-project.egg-link (link to .)
+[0.971s] Installing turtlesim_controller script to /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+[0.971s] Installing turtlesim_controller_pid script to /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+[0.971s] Installing turtlesim_grid_goal2 script to /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+[0.971s] Installing turtlesim_relocate script to /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+[0.971s] Installing turtlesim_rotate_chase_goal4 script to /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+[0.971s] Installing turtlesim_rotate_chase_goal5 script to /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+[0.971s] Installing turtlesim_rotate_chase_goal6 script to /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+[0.972s] Installing turtlesim_rotate_goal3 script to /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+[0.972s] Installing turtlesim_spawner script to /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+[0.972s] 
+[0.972s] Installed /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project
+[0.972s] running install_data
+[0.972s] creating /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/share/ament_index
+[0.972s] creating /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/share/ament_index/resource_index
+[0.972s] creating /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/share/ament_index/resource_index/packages
+[0.972s] copying resource/turtle_sim_project -> /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/share/ament_index/resource_index/packages
+[0.972s] copying package.xml -> /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/share/turtle_sim_project
+[0.991s] Invoked command in '/home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project' returned '0': PYTHONPATH=/home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/prefix_override:/home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build --no-deps install_data

@@ -1,2 +1,1 @@
-float64 velocity
-float64 acceleration
+/home/nextup/turtle_bot/flytbase_assignment/src/custom_msgs/msg/Movement.msg

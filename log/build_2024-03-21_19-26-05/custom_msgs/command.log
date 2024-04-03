@@ -1,2 +1,0 @@
-Invoking command in '/home/sahil-22/ros2_ws/build/custom_msgs': CMAKE_PREFIX_PATH=/home/sahil-22/ros2_ws/install/turtle_sim_project:/opt/ros/humble /usr/bin/cmake /home/sahil-22/ros2_ws/src/custom_msgs -DCMAKE_INSTALL_PREFIX=/home/sahil-22/ros2_ws/install/custom_msgs
-Invoked command in '/home/sahil-22/ros2_ws/build/custom_msgs' returned '1': CMAKE_PREFIX_PATH=/home/sahil-22/ros2_ws/install/turtle_sim_project:/opt/ros/humble /usr/bin/cmake /home/sahil-22/ros2_ws/src/custom_msgs -DCMAKE_INSTALL_PREFIX=/home/sahil-22/ros2_ws/install/custom_msgs

@@ -1,4 +1,1 @@
-# generated from rosidl_cmake/cmake/rosidl_cmake-extras.cmake.in
-
-set(custom_msgs_IDL_FILES "msg/Movement.idl")
-set(custom_msgs_INTERFACE_FILES "msg/Movement.msg")
+/home/nextup/turtle_bot/flytbase_assignment/build/custom_msgs/rosidl_cmake/rosidl_cmake-extras.cmake

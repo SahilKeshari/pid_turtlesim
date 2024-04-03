@@ -18,6 +18,7 @@ class TurtleRotate(Node):
         self.rt_pose_subscriber_ = self.create_subscription(TurtlePose,'/turtle1/pose',self.rt_callback_pose,10)
 
         self.rt_pose_publisher_ = self.create_publisher(TurtlePose,'rt_real_pose',10)
+        self.rt_real_pose_subscriber_ = self.create_subscription(TurtlePose,'/rt_real_pose',self.rt_callback_real_pose,10)
 
         self.pt_pose_ = None
         self.pt_publisher_ = self.create_publisher(Twist, '/police_turtle/cmd_vel', 10)
@@ -43,6 +44,9 @@ class TurtleRotate(Node):
         self.dist_y = None
 
         self.pt_plot_movement = self.create_publisher(Movement,'pt/movement_data',10)
+
+        self.rt_pose_for_pt_x = None
+        self.rt_pose_for_pt_y = None
 
     def call_relocate_server(self,x,y,theta):
         client_clear = self.create_client(Empty,'clear')
@@ -90,8 +94,7 @@ class TurtleRotate(Node):
 
         self.call_spawn_server('police_turtle',x,y,theta)
         self.chase_timer = self.create_timer(0.1,self.pt_chase_loop)
-        self.get_dist_timer = self.create_timer(5.0,self.get_dist)
-        self.dist_subscriber = self.create_subscription(TurtlePose,'/rt_real_pose',self.get_dist,10)
+        self.get_rt_pos_timer = self.create_timer(5.0,self.get_rt_pose)
         self.check_dist_timer = self.create_timer(0.01,self.check_dist)
 
         self.pt_timer.cancel()
@@ -106,6 +109,9 @@ class TurtleRotate(Node):
 
         self.rt_pose_publisher_.publish(rt_pose)
 
+    def rt_callback_real_pose(self,msg):
+        self.rt_real_pose = msg
+
     def pt_callback_pose(self,msg):
         self.pt_pose_ = msg
 
@@ -119,10 +125,12 @@ class TurtleRotate(Node):
     def pt_chase_loop(self):
         if self.rt_pose_ == None or self.pt_pose_ == None:
             return
-
-        # self.get_logger().info(f' {self.dist_x} {self.dist_y}')
-        if self.dist_x == None or self.dist_y == None:
+        
+        if self.rt_pose_for_pt_x == None or self.rt_pose_for_pt_y == None:
             return
+
+        self.dist_x = self.rt_pose_for_pt_x - self.pt_pose_.x
+        self.dist_y = self.rt_pose_for_pt_y - self.pt_pose_.y
 
         msg = Twist()
         distance = (math.sqrt(self.dist_x * self.dist_x + self.dist_y * self.dist_y))
@@ -174,13 +182,14 @@ class TurtleRotate(Node):
         else:
             return delta_velocity
 
-    def get_dist(self,msg=None):
-        if self.pt_pose_ == None or msg == None:
+    def get_rt_pose(self):
+        if self.rt_real_pose == None:
             return
+
+        self.rt_pose_for_pt_x = self.rt_real_pose.x
+        self.rt_pose_for_pt_y = self.rt_real_pose.y
+        print(self.rt_pose_for_pt_x,self.rt_pose_for_pt_y)
         
-        self.dist_x = msg.x - self.pt_pose_.x
-        self.dist_y = msg.y - self.pt_pose_.y
-    
     def check_dist(self):
         if self.rt_pose_ == None or self.pt_pose_ == None:
             return

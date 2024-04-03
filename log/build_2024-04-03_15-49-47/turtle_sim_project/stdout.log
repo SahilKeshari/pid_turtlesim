@@ -1,0 +1,67 @@
+running egg_info
+creating ../../build/turtle_sim_project/turtle_sim_project.egg-info
+writing ../../build/turtle_sim_project/turtle_sim_project.egg-info/PKG-INFO
+writing dependency_links to ../../build/turtle_sim_project/turtle_sim_project.egg-info/dependency_links.txt
+writing entry points to ../../build/turtle_sim_project/turtle_sim_project.egg-info/entry_points.txt
+writing requirements to ../../build/turtle_sim_project/turtle_sim_project.egg-info/requires.txt
+writing top-level names to ../../build/turtle_sim_project/turtle_sim_project.egg-info/top_level.txt
+writing manifest file '../../build/turtle_sim_project/turtle_sim_project.egg-info/SOURCES.txt'
+reading manifest file '../../build/turtle_sim_project/turtle_sim_project.egg-info/SOURCES.txt'
+writing manifest file '../../build/turtle_sim_project/turtle_sim_project.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build
+creating /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build/lib
+creating /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build/lib/turtle_sim_project
+copying turtle_sim_project/turtle_rotate_goal3.py -> /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build/lib/turtle_sim_project
+copying turtle_sim_project/turtle_grid_goal2.py -> /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build/lib/turtle_sim_project
+copying turtle_sim_project/turtle_spawner.py -> /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build/lib/turtle_sim_project
+copying turtle_sim_project/turtle_rotate_chase_goal5.py -> /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build/lib/turtle_sim_project
+copying turtle_sim_project/__init__.py -> /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build/lib/turtle_sim_project
+copying turtle_sim_project/turtle_rotate_chase_goal6.py -> /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build/lib/turtle_sim_project
+copying turtle_sim_project/turtle_controller.py -> /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build/lib/turtle_sim_project
+copying turtle_sim_project/turtle_relocate.py -> /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build/lib/turtle_sim_project
+copying turtle_sim_project/turtle_rotate_chase_goal4.py -> /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build/lib/turtle_sim_project
+copying turtle_sim_project/turtle_controller_pid.py -> /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build/lib/turtle_sim_project
+running install
+running install_lib
+creating /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project
+copying /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build/lib/turtle_sim_project/turtle_rotate_goal3.py -> /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project
+copying /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build/lib/turtle_sim_project/turtle_grid_goal2.py -> /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project
+copying /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build/lib/turtle_sim_project/turtle_spawner.py -> /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project
+copying /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build/lib/turtle_sim_project/turtle_rotate_chase_goal5.py -> /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project
+copying /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build/lib/turtle_sim_project/__init__.py -> /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project
+copying /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build/lib/turtle_sim_project/turtle_rotate_chase_goal6.py -> /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project
+copying /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build/lib/turtle_sim_project/turtle_controller.py -> /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project
+copying /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build/lib/turtle_sim_project/turtle_relocate.py -> /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project
+copying /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build/lib/turtle_sim_project/turtle_rotate_chase_goal4.py -> /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project
+copying /home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/build/lib/turtle_sim_project/turtle_controller_pid.py -> /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project
+byte-compiling /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project/turtle_rotate_goal3.py to turtle_rotate_goal3.cpython-310.pyc
+byte-compiling /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project/turtle_grid_goal2.py to turtle_grid_goal2.cpython-310.pyc
+byte-compiling /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project/turtle_spawner.py to turtle_spawner.cpython-310.pyc
+byte-compiling /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project/turtle_rotate_chase_goal5.py to turtle_rotate_chase_goal5.cpython-310.pyc
+byte-compiling /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project/turtle_rotate_chase_goal6.py to turtle_rotate_chase_goal6.cpython-310.pyc
+byte-compiling /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project/turtle_controller.py to turtle_controller.cpython-310.pyc
+byte-compiling /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project/turtle_relocate.py to turtle_relocate.cpython-310.pyc
+byte-compiling /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project/turtle_rotate_chase_goal4.py to turtle_rotate_chase_goal4.cpython-310.pyc
+byte-compiling /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project/turtle_controller_pid.py to turtle_controller_pid.cpython-310.pyc
+running install_data
+creating /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/share/ament_index
+creating /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/share/ament_index/resource_index
+creating /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/share/ament_index/resource_index/packages
+copying resource/turtle_sim_project -> /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/share/ament_index/resource_index/packages
+copying package.xml -> /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/share/turtle_sim_project
+running install_egg_info
+Copying ../../build/turtle_sim_project/turtle_sim_project.egg-info to /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle_sim_project-0.0.0-py3.10.egg-info
+running install_scripts
+Installing turtlesim_controller script to /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+Installing turtlesim_controller_pid script to /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+Installing turtlesim_grid_goal2 script to /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+Installing turtlesim_relocate script to /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+Installing turtlesim_rotate_chase_goal4 script to /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+Installing turtlesim_rotate_chase_goal5 script to /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+Installing turtlesim_rotate_chase_goal6 script to /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+Installing turtlesim_rotate_goal3 script to /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+Installing turtlesim_spawner script to /home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+writing list of installed files to '/home/nextup/turtle_bot/flytbase_assignment/build/turtle_sim_project/install.log'

@@ -1,0 +1,28 @@
+[0.133s] Invoking command in '/home/nextup/turtle_bot/flytbase_assignment/build/custom_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project:/opt/ros/humble /usr/bin/cmake /home/nextup/turtle_bot/flytbase_assignment/src/custom_msgs -DCMAKE_INSTALL_PREFIX=/home/nextup/turtle_bot/flytbase_assignment/install/custom_msgs
+[0.141s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.237s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.242s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.243s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.245s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.267s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.468s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.589s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.751s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.771s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[0.788s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.788s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[0.788s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[0.801s] -- Configuring done
+[0.819s] -- Generating done
+[0.821s] -- Build files have been written to: /home/nextup/turtle_bot/flytbase_assignment/build/custom_msgs
+[0.824s] Invoked command in '/home/nextup/turtle_bot/flytbase_assignment/build/custom_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project:/opt/ros/humble /usr/bin/cmake /home/nextup/turtle_bot/flytbase_assignment/src/custom_msgs -DCMAKE_INSTALL_PREFIX=/home/nextup/turtle_bot/flytbase_assignment/install/custom_msgs
+[0.826s] Invoking command in '/home/nextup/turtle_bot/flytbase_assignment/build/custom_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project:/opt/ros/humble /usr/bin/cmake --build /home/nextup/turtle_bot/flytbase_assignment/build/custom_msgs -- -j16 -l16
+[0.851s] [35m[1mConsolidate compiler generated dependencies of target custom_msgs__rosidl_generator_c[0m
+[0.858s] failed to create symbolic link '/home/nextup/turtle_bot/flytbase_assignment/build/custom_msgs/ament_cmake_python/custom_msgs/custom_msgs' because existing path cannot be removed: Is a directory
+[0.858s] [  3%] Built target custom_msgs__cpp
+[0.858s] gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_custom_msgs.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_custom_msgs] Error 1
+[0.858s] gmake[1]: *** [CMakeFiles/Makefile2:421: CMakeFiles/ament_cmake_python_symlink_custom_msgs.dir/all] Error 2
+[0.858s] gmake[1]: *** Waiting for unfinished jobs....
+[0.858s] [ 12%] Built target custom_msgs__rosidl_generator_c
+[0.859s] gmake: *** [Makefile:146: all] Error 2
+[0.861s] Invoked command in '/home/nextup/turtle_bot/flytbase_assignment/build/custom_msgs' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nextup/turtle_bot/flytbase_assignment/install/turtle_sim_project:/opt/ros/humble /usr/bin/cmake --build /home/nextup/turtle_bot/flytbase_assignment/build/custom_msgs -- -j16 -l16

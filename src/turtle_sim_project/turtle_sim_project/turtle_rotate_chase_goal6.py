@@ -54,6 +54,9 @@ class TurtleRotate(Node):
 
         self.pt_plot_movement = self.create_publisher(Movement,'pt/movement_data',10)
 
+        self.pt_pose_for_rt_x = None
+        self.pt_pose_for_rt_y = None
+
 
     def add_gaussian_noise(self):
         self.noise_pos_x = random.gauss(0, 1.0)
@@ -145,6 +148,14 @@ class TurtleRotate(Node):
         # self.get_logger().info(f' {self.dist_x} {self.dist_y}')
         if self.dist_x == None or self.dist_y == None:
             return
+        
+        if self.pt_pose_for_rt_x == None or self.pt_pose_for_rt_y == None:
+            return
+
+        self.pt_last_avg_pos_x = (self.pt_last_avg_pos_x + self.pt_pose_for_rt_x)/2
+        self.pt_last_avg_pos_y = (self.pt_last_avg_pos_y + self.pt_pose_for_rt_y)/2
+        self.dist_x = self.pt_last_avg_pos_x - self.pt_pose_.x
+        self.dist_y = self.pt_last_avg_pos_y - self.pt_pose_.y
 
         initial_angle_rad = math.atan2(self.dist_y, self.dist_x)
         initial_angle_deg = math.degrees(initial_angle_rad)
@@ -208,10 +219,9 @@ class TurtleRotate(Node):
         if self.pt_pose_ == None or msg == None:
             return        
 
-        self.pt_last_avg_pos_x = (self.pt_last_avg_pos_x + msg.x)/2
-        self.pt_last_avg_pos_y = (self.pt_last_avg_pos_y + msg.y)/2
-        self.dist_x = self.pt_last_avg_pos_x - self.pt_pose_.x
-        self.dist_y = self.pt_last_avg_pos_y - self.pt_pose_.y
+        self.pt_pose_for_rt_x = self.pt_pose_.x
+        self.pt_pose_for_rt_y = self.pt_pose_.y
+        print(self.pt_pose_for_rt_x,self.pt_pose_for_rt_y)
 
     
     def check_dist(self):

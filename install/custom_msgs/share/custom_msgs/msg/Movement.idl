@@ -1,14 +1,1 @@
-// generated from rosidl_adapter/resource/msg.idl.em
-// with input from custom_msgs/msg/Movement.msg
-// generated code does not contain a copyright notice
-
-
-module custom_msgs {
-  module msg {
-    struct Movement {
-      double velocity;
-
-      double acceleration;
-    };
-  };
-};
+/home/nextup/turtle_bot/flytbase_assignment/build/custom_msgs/rosidl_adapter/custom_msgs/msg/Movement.idl
