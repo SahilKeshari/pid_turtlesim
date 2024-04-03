@@ -17,7 +17,6 @@ class TurtleRotate(Node):
         self.rt_pose_ = None
         self.rt_publisher_ = self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
         self.rt_pose_subscriber_ = self.create_subscription(TurtlePose,'/turtle1/pose',self.rt_callback_pose,10)
-
         self.rt_pose_publisher_ = self.create_publisher(TurtlePose,'rt_real_pose',10)
 
         self.pt_pose_ = None
@@ -47,15 +46,13 @@ class TurtleRotate(Node):
         self.noise_pos_y = 0.0
         self.noise_orie = 0.0
         self.noisy_pose_publisher_ = self.create_publisher(TurtlePose,'/rt_noisy_pose',10)
+        self.rt_noisy_pose_subscriber_ = self.create_subscription(TurtlePose,'/rt_noisy_pose',self.rt_callback_noisy_pose,10)
         self.noise_timer = self.create_timer(10.0,self.add_gaussian_noise)
 
-        self.pt_last_avg_pos_x = 0.0
-        self.pt_last_avg_pos_y = 0.0
+        self.rt_avg_pos_for_pt_x = None
+        self.rt_avg_pos_for_pt_y = None
 
         self.pt_plot_movement = self.create_publisher(Movement,'pt/movement_data',10)
-
-        self.pt_pose_for_rt_x = None
-        self.pt_pose_for_rt_y = None
 
 
     def add_gaussian_noise(self):
@@ -105,13 +102,13 @@ class TurtleRotate(Node):
         y = random.uniform(0.0,10.0)
         theta = random.uniform(0.0,2*math.pi)
 
-        # x,y,theta = 1.0,1.0,0.0 # for testing purpose
+        # x,y,theta = 5.25,6.0,0.0 # for testing purpose
+
 
         self.call_spawn_server('police_turtle',x,y,theta)
         self.chase_timer = self.create_timer(0.1,self.pt_chase_loop)
-        self.get_dist_timer = self.create_timer(5.0,self.get_dist)
-        self.dist_subscriber = self.create_subscription(TurtlePose,'/rt_noisy_pose',self.get_dist,10)
-        self.check_dist_timer = self.create_timer(0.1,self.check_dist)
+        self.get_dist_timer = self.create_timer(5.0,self.get_rt_pose)
+        self.check_dist_timer = self.create_timer(0.01,self.check_dist)
 
         self.pt_timer.cancel()
 
@@ -125,11 +122,14 @@ class TurtleRotate(Node):
 
         self.rt_pose_publisher_.publish(rt_pose)
 
-        rt_noisy_pose = TurtlePose()
-        rt_noisy_pose.x = self.rt_pose_.x + self.noise_pos_x
-        rt_noisy_pose.y = self.rt_pose_.y + self.noise_pos_y
-        rt_noisy_pose.theta = self.rt_pose_.theta + self.noise_orie
-        self.noisy_pose_publisher_.publish(rt_noisy_pose)
+        rt_pose_with_noise = TurtlePose()
+        rt_pose_with_noise.x = self.rt_pose_.x + self.noise_pos_x
+        rt_pose_with_noise.y = self.rt_pose_.y + self.noise_pos_y
+        rt_pose_with_noise.theta = self.rt_pose_.theta + self.noise_orie
+        self.noisy_pose_publisher_.publish(rt_pose_with_noise)
+    
+    def rt_callback_noisy_pose(self,msg):
+        self.rt_noisy_pose = msg
 
     def pt_callback_pose(self,msg):
         self.pt_pose_ = msg
@@ -145,33 +145,30 @@ class TurtleRotate(Node):
         if self.rt_pose_ == None or self.pt_pose_ == None:
             return
 
-        # self.get_logger().info(f' {self.dist_x} {self.dist_y}')
-        if self.dist_x == None or self.dist_y == None:
-            return
+        if self.rt_avg_pos_for_pt_x == None or self.rt_avg_pos_for_pt_y == None:
+             return
         
-        if self.pt_pose_for_rt_x == None or self.pt_pose_for_rt_y == None:
-            return
+        msg = Twist()
 
-        self.pt_last_avg_pos_x = (self.pt_last_avg_pos_x + self.pt_pose_for_rt_x)/2
-        self.pt_last_avg_pos_y = (self.pt_last_avg_pos_y + self.pt_pose_for_rt_y)/2
-        self.dist_x = self.pt_last_avg_pos_x - self.pt_pose_.x
-        self.dist_y = self.pt_last_avg_pos_y - self.pt_pose_.y
 
-        initial_angle_rad = math.atan2(self.dist_y, self.dist_x)
-        initial_angle_deg = math.degrees(initial_angle_rad)
+        initial_angle_rad = math.atan2(self.rt_avg_pos_for_pt_x-6.0, self.rt_avg_pos_for_pt_x-5.25)
+        initial_angle_deg = math.degrees(initial_angle_rad)  
         new_angle_deg = initial_angle_deg + (12 * self.speed * 5)
+        new_angle_deg = new_angle_deg % 360
         new_angle_rad = math.radians(new_angle_deg)
 
         # to estimate the location of pt after 5 secs
-        estimate_dist_x = self.radius * math.cos(new_angle_rad)
-        estimate_dist_y = self.radius * math.sin(new_angle_rad)
+        estimate_rt_pose_x = 5.25 + self.radius * math.cos(new_angle_rad)
+        estimate_rt_pose_y = 6.0 + self.radius * math.sin(new_angle_rad)
 
-        msg = Twist()
+        estimate_dist_x = estimate_rt_pose_x - self.pt_pose_.x
+        estimate_dist_y = estimate_rt_pose_y - self.pt_pose_.y
+
         distance = (math.sqrt(estimate_dist_x * estimate_dist_x + estimate_dist_y * estimate_dist_y))
 
         if distance > 3.0:
             desired_linear_velocity = 2*distance
-            desired_angular_velocity = math.atan2(self.dist_y, self.dist_x)
+            desired_angular_velocity = math.atan2(estimate_dist_y,estimate_dist_x)
 
             # Calculate velocity changes
             delta_linear_velocity = desired_linear_velocity - self.prev_linear_velocity
@@ -201,8 +198,7 @@ class TurtleRotate(Node):
             data.velocity = desired_linear_velocity
             data.acceleration = delta_linear_velocity
             self.pt_plot_movement.publish(data)
-        else:
-            self.speed = 0.0
+
 
         self.pt_publisher_.publish(msg)
 
@@ -215,14 +211,15 @@ class TurtleRotate(Node):
         else:
             return delta_velocity
 
-    def get_dist(self,msg=None):
-        if self.pt_pose_ == None or msg == None:
-            return        
-
-        self.pt_pose_for_rt_x = self.pt_pose_.x
-        self.pt_pose_for_rt_y = self.pt_pose_.y
-        print(self.pt_pose_for_rt_x,self.pt_pose_for_rt_y)
-
+    def get_rt_pose(self):
+        if self.rt_noisy_pose == None:
+            return
+        if self.rt_avg_pos_for_pt_x == None or self.rt_avg_pos_for_pt_y == None:
+            self.rt_avg_pos_for_pt_x = self.rt_noisy_pose.x
+            self.rt_avg_pos_for_pt_y = self.rt_noisy_pose.y
+        
+        self.rt_avg_pos_for_pt_x = (self.rt_avg_pos_for_pt_x + self.rt_noisy_pose.x)/2
+        self.rt_avg_pos_for_pt_y = (self.rt_avg_pos_for_pt_y + self.rt_noisy_pose.y)/2
     
     def check_dist(self):
         if self.rt_pose_ == None or self.pt_pose_ == None:

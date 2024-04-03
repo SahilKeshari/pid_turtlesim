@@ -1,0 +1,23 @@
+running develop
+running egg_info
+writing turtle_sim_project.egg-info/PKG-INFO
+writing dependency_links to turtle_sim_project.egg-info/dependency_links.txt
+writing entry points to turtle_sim_project.egg-info/entry_points.txt
+writing requirements to turtle_sim_project.egg-info/requires.txt
+writing top-level names to turtle_sim_project.egg-info/top_level.txt
+reading manifest file 'turtle_sim_project.egg-info/SOURCES.txt'
+writing manifest file 'turtle_sim_project.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/sahil-22/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle-sim-project.egg-link (link to .)
+Installing turtlesim_controller script to /home/sahil-22/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+Installing turtlesim_controller_pid script to /home/sahil-22/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+Installing turtlesim_grid_goal2 script to /home/sahil-22/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+Installing turtlesim_relocate script to /home/sahil-22/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+Installing turtlesim_rotate_chase_goal4 script to /home/sahil-22/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+Installing turtlesim_rotate_chase_goal5 script to /home/sahil-22/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+Installing turtlesim_rotate_chase_goal6 script to /home/sahil-22/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+Installing turtlesim_rotate_goal3 script to /home/sahil-22/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+Installing turtlesim_spawner script to /home/sahil-22/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+
+Installed /home/sahil-22/flytbase_assignment/build/turtle_sim_project
+running symlink_data

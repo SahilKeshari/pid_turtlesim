@@ -1,0 +1,27 @@
+[0.646s] Invoking command in '/home/sahil-22/flytbase_assignment/build/turtle_sim_project': PYTHONPATH=/home/sahil-22/flytbase_assignment/build/turtle_sim_project/prefix_override:/home/sahil-22/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/sahil-22/flytbase_assignment/build/turtle_sim_project/build --no-deps symlink_data
+[0.909s] running develop
+[0.909s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[0.909s]   warnings.warn(
+[1.022s] running egg_info
+[1.022s] writing turtle_sim_project.egg-info/PKG-INFO
+[1.022s] writing dependency_links to turtle_sim_project.egg-info/dependency_links.txt
+[1.023s] writing entry points to turtle_sim_project.egg-info/entry_points.txt
+[1.023s] writing requirements to turtle_sim_project.egg-info/requires.txt
+[1.023s] writing top-level names to turtle_sim_project.egg-info/top_level.txt
+[1.025s] reading manifest file 'turtle_sim_project.egg-info/SOURCES.txt'
+[1.026s] writing manifest file 'turtle_sim_project.egg-info/SOURCES.txt'
+[1.027s] running build_ext
+[1.027s] Creating /home/sahil-22/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages/turtle-sim-project.egg-link (link to .)
+[1.028s] Installing turtlesim_controller script to /home/sahil-22/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+[1.028s] Installing turtlesim_controller_pid script to /home/sahil-22/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+[1.028s] Installing turtlesim_grid_goal2 script to /home/sahil-22/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+[1.028s] Installing turtlesim_relocate script to /home/sahil-22/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+[1.028s] Installing turtlesim_rotate_chase_goal4 script to /home/sahil-22/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+[1.028s] Installing turtlesim_rotate_chase_goal5 script to /home/sahil-22/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+[1.028s] Installing turtlesim_rotate_chase_goal6 script to /home/sahil-22/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+[1.028s] Installing turtlesim_rotate_goal3 script to /home/sahil-22/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+[1.028s] Installing turtlesim_spawner script to /home/sahil-22/flytbase_assignment/install/turtle_sim_project/lib/turtle_sim_project
+[1.029s] 
+[1.029s] Installed /home/sahil-22/flytbase_assignment/build/turtle_sim_project
+[1.029s] running symlink_data
+[1.052s] Invoked command in '/home/sahil-22/flytbase_assignment/build/turtle_sim_project' returned '0': PYTHONPATH=/home/sahil-22/flytbase_assignment/build/turtle_sim_project/prefix_override:/home/sahil-22/flytbase_assignment/install/turtle_sim_project/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/sahil-22/flytbase_assignment/build/turtle_sim_project/build --no-deps symlink_data

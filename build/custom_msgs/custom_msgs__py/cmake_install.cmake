@@ -1,8 +1,8 @@
-# Install script for directory: /home/nextup/turtle_bot/flytbase_assignment/build/custom_msgs/custom_msgs__py
+# Install script for directory: /home/sahil-22/flytbase_assignment/build/custom_msgs/custom_msgs__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/nextup/turtle_bot/flytbase_assignment/install/custom_msgs")
+  set(CMAKE_INSTALL_PREFIX "/home/sahil-22/flytbase_assignment/install/custom_msgs")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

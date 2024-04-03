@@ -90,7 +90,8 @@ class TurtleRotate(Node):
         y = random.uniform(0.0,10.0)
         theta = random.uniform(0.0,2*math.pi)
 
-        # x,y,theta = 1.0,1.0,0.0 # for testing purpose
+        # x,y,theta = 5.25,6.0,0.0 # for testing purpose
+
 
         self.call_spawn_server('police_turtle',x,y,theta)
         self.chase_timer = self.create_timer(0.1,self.pt_chase_loop)
@@ -188,7 +189,7 @@ class TurtleRotate(Node):
 
         self.rt_pose_for_pt_x = self.rt_real_pose.x
         self.rt_pose_for_pt_y = self.rt_real_pose.y
-        print(self.rt_pose_for_pt_x,self.rt_pose_for_pt_y)
+        # print(self.rt_pose_for_pt_x,self.rt_pose_for_pt_y)
         
     def check_dist(self):
         if self.rt_pose_ == None or self.pt_pose_ == None:

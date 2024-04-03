@@ -91,7 +91,7 @@ class TurtleRotate(Node):
         y = random.uniform(0.0,10.0)
         theta = random.uniform(0.0,2*math.pi)
 
-        # x,y,theta = 1.0,1.0,0.0 # for testing purpose
+        # x,y,theta = 5.25,6.0,0.0 # for testing purpose
 
         self.call_spawn_server('police_turtle',x,y,theta)
         self.chase_timer = self.create_timer(0.1,self.pt_chase_loop)
@@ -130,9 +130,6 @@ class TurtleRotate(Node):
         if self.rt_pose_for_pt_x == None or self.rt_pose_for_pt_y == None:
             return
 
-        # self.dist_x = self.rt_pose_for_pt_x - self.pt_pose_.x
-        # self.dist_y = self.rt_pose_for_pt_y - self.pt_pose_.y
-
         msg = Twist()
 
         initial_angle_rad = math.atan2(self.rt_pose_for_pt_y-6.0, self.rt_pose_for_pt_x-5.25)
@@ -150,12 +147,9 @@ class TurtleRotate(Node):
 
         distance = (math.sqrt(estimate_dist_x * estimate_dist_x + estimate_dist_y * estimate_dist_y))
 
-        # print(self.dist_x,self.dist_y)
-        print('estimated',estimate_rt_pose_x,estimate_rt_pose_y)
-        # distance = (math.sqrt(self.dist_x*self.dist_x + self.dist_y*self.dist_y))
-        if distance > 1.0:
+        if distance > 3.0:
             desired_linear_velocity = 2*distance
-            desired_angular_velocity = math.atan2(estimate_rt_pose_x, estimate_dist_x)
+            desired_angular_velocity = math.atan2(estimate_dist_y, estimate_dist_x)
 
             # Calculate velocity changes
             delta_linear_velocity = desired_linear_velocity - self.prev_linear_velocity
@@ -187,9 +181,6 @@ class TurtleRotate(Node):
             data.acceleration = delta_linear_velocity
             self.pt_plot_movement.publish(data)
 
-        else:
-            self.speed = 0.0
-
         self.pt_publisher_.publish(msg)
 
     def limit_velocity_change(self, delta_velocity):
@@ -207,7 +198,6 @@ class TurtleRotate(Node):
 
         self.rt_pose_for_pt_x = self.rt_real_pose.x
         self.rt_pose_for_pt_y = self.rt_real_pose.y
-        print('obtained',self.rt_pose_for_pt_x,self.rt_pose_for_pt_y)
 
     
     def check_dist(self):
@@ -218,7 +208,7 @@ class TurtleRotate(Node):
         dist_y = self.rt_pose_.y - self.pt_pose_.y
         distance = (math.sqrt(dist_x * dist_x + dist_y * dist_y))
 
-        if distance < 1.0:
+        if distance < 3.0:
             self.speed = 0.0
             self.get_logger().info('The chase is complete!!!')
             rclpy.shutdown()
