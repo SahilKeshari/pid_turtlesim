@@ -3,15 +3,6 @@ setup.cfg
 setup.py
 resource/turtle_sim_project
 turtle_sim_project/__init__.py
-turtle_sim_project/turtle_controller.py
-turtle_sim_project/turtle_controller_pid.py
-turtle_sim_project/turtle_grid_goal2.py
-turtle_sim_project/turtle_relocate.py
-turtle_sim_project/turtle_rotate_chase_goal4.py
-turtle_sim_project/turtle_rotate_chase_goal5.py
-turtle_sim_project/turtle_rotate_chase_goal6.py
-turtle_sim_project/turtle_rotate_goal3.py
-turtle_sim_project/turtle_spawner.py
 turtle_sim_project.egg-info/PKG-INFO
 turtle_sim_project.egg-info/SOURCES.txt
 turtle_sim_project.egg-info/dependency_links.txt
